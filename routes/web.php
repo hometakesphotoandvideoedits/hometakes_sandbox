@@ -11,8 +11,42 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::group([],function(){
+
+    Route::get('/', function () {
+        return view('website.websitehome');
+    });
+    
+    Route::get('/websitehome', function () {
+        return view('website.websitehome');
+    });
+    // Route::get('/faq', function () {
+    //     return view('website.faq');
+    // })->name('FAQ');
+    Route::get('/faqfind','FaqController@findsearchFaq');
+    Route::get('/faq','FaqController@retrieveFaqlist')->name('FAQ');
+    Route::get('/oclp', function () {
+        return view('website.our-customers-loyalty-program');
+    });
+    Route::get('/vmc', function () {
+        return view('website.video-music-collection');
+    });
+    Route::get('/virtual-staging', function () {
+        return view('website.virtual-staging');
+    })->name('virtual-staging');
+    
+    Route::get('/sign-in', function () {
+        return view('website.sign-in');
+    })->name('sign-in');
+    Route::get('/sign-up', function () {
+        return view('website.sign-up');
+    })->name('sign-up');
+    Route::get('/support-desk', function () {
+        return view('website.ticket');
+    })->name('support-desk');
 });
 
 Route::group(['middleware' => ['__Session']], function () {
