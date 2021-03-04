@@ -21,6 +21,7 @@
     <!-- Custom styles for Class and ID-->
     <link href="{{ asset('css/custom.css')}}" rel="stylesheet">
     <!-- Font Awesome -->
+    
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Datatable -->
     {{-- <link href="{{ asset('css/datatable/bootstrap.min.css')}}" rel="stylesheet"> --}}
